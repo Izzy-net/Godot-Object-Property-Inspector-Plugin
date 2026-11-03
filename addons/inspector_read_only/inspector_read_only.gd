@@ -6,7 +6,6 @@ func _can_handle(object: Object) -> bool:
 func _parse_begin(object: Object) -> void:  # happens when you click on the object/node - change to _parse_end to put it at the bottom of the inspector
 	var container:= FoldableContainer.new()   # parent container which allows labels to be folded away
 	container.title = "Read-Only Properties"
-	container.mouse_entered.connect(func() -> void: print("entered"))
 	
 	var v_container := VBoxContainer.new() # will arrange the labels vertically
 	container.add_child(v_container)           
